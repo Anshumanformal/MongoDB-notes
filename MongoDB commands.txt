@@ -1,0 +1,33 @@
+//First type mongo in CMD. This will start the shell.
+
+// To show databases.
+
+>show dbs
+
+//To create/use a database.
+
+>use <new_database_name>
+//This will create the database, if not present, else it will switch to the database already created earlier.
+// Now if we type 'show dbs' in the shell, then the newly created database is
+// not shown.
+
+// Ans. In order for the database to show in the newly created database, there
+// should be atleast one collection created.
+
+// To create a new collection.
+// Syntax: db.<collection_name>.insertOne({<collection1: "value1">,<collection2: "value2">,<collection3: "value3">})
+
+//To view the current/active database.
+>db
+
+//To view the collections in the database.
+>show collections
+
+//To display the total number of documents in the collection.
+>db.<collection_name>.find()
+
+//To display the above data in a more pretty format.
+>db.<collection_name>.find().pretty()
+
+
+

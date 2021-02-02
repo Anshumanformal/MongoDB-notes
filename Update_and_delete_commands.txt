@@ -1,0 +1,11 @@
+//Update commands.
+UpdateOne() - db.<collection_name>.updateOne(<filter>,<update>)
+
+UpdateMany() - db.<collection_name>.updateMany(<filter>,<update>)
+
+
+//Delete commands.
+deleteMany() - db.<collection_name>.deleteMany(<deletion_criteria>)
+
+
+

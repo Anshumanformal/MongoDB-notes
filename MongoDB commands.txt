@@ -24,10 +24,32 @@
 >show collections
 
 //To display the total number of documents in the collection.
+//Syntax -> db.<collection>.find(<query>,<projection>)
+
 >db.<collection_name>.find()
 
 //To display the above data in a more pretty format.
 >db.<collection_name>.find().pretty()
+
+//To find a specific field in a collection. For eg. - name.
+>db.<collection_name>.find({name:<any_desired_value>}).pretty()
+
+//To find a specific field in a collection without other fields and also without ID. For eg. - name.
+>db.<collection_name>.find({name:<any_desired_value>},{__id:0, name: 1}).pretty()
+
+//Here, 0 with any property means not displaying.
+        1 with any property means displaying.
+
+>db.<collection_name>.find({active:<any_desired_value>}).pretty().limit(1)
+//Here, with limit(1), we get the first value which matches the filter.
+//With limit(2), we get the first two values which match the filter.
+
+//The same objective can be achieved by:
+>db.<collection_name>.findOne()
+
+>db.<collection_name>.find({active:<any_desired_value>}).pretty().limit(1).skip(1)
+
+
 
 
 

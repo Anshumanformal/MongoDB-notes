@@ -7,5 +7,9 @@ UpdateMany() - db.<collection_name>.updateMany(<filter>,<update>)
 //Delete commands.
 deleteMany() - db.<collection_name>.deleteMany(<deletion_criteria>)
 
+//Delete the whole collection.
+db.<collection_name>.deleteMany({})
+
+
 
 

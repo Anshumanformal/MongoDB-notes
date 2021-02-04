@@ -1,8 +1,8 @@
 //Use this function with the main file(used for creating database).
 
-const updateDocument = async(__id)=>{
+const updateDocument = async(_id)=>{
 try{
-const result = await Playlist.updateOne({__id},{
+const result = await Playlist.updateOne({_id},{
       $set : {
             name : "JavaScript"  
              }

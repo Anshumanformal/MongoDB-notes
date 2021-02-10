@@ -44,7 +44,7 @@ const playlistSchema = new mongoose.Schema({
 
 //Here, Playlist is a class created from mongoose.model.
 //Collection creation.
-const Playlist = new mongoose.model("Playlist", playlistSchema); //Playlist is in PascalCase/ UpperCamelCase.
+const Playlist = new mongoose.model("Playlist", PlaylistSchema); //Playlist is in PascalCase/ UpperCamelCase.
 
 // Here, the value Playlist passed into the mongoose.model() method is converted into
 // 'Playlists' by some node_modules package. Basically, it converts the argument from

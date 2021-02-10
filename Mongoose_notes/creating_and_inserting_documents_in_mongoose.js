@@ -1,5 +1,15 @@
 const mongoose = require("mongoose");
 
+
+//Basic format.
+/*
+Connect
+Schema
+Document
+Fields
+*/
+
+
 //Connection creation and creating a new database.
 
 // Here, connection is established.

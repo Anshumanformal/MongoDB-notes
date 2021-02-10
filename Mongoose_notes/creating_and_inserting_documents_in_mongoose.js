@@ -4,8 +4,17 @@ const mongoose = require("mongoose");
 //Basic format.
 /*
 Connect
+   |
+   V
 Schema
+   |
+   V   
+Collection
+   |
+   V   
 Document
+   |
+   V   
 Fields
 */
 

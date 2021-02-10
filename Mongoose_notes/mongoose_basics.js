@@ -15,7 +15,6 @@ mongoose.connect(mongodb://localhost:27017/<database_name>,
   console.log("Error :", err);
   });
 
-//Basic format.
 
 //Schema
 //A mongoose schema defines the structure of

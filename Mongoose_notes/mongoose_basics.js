@@ -1,6 +1,6 @@
 //Mongoose is a MongoDB framework to connect MongoDB with NodeJS.
 
-//It is a Object Data Modelling
+//It is a Object Data Modelling framework.
 
 const mongoose = require('mongoose');
 
@@ -9,11 +9,13 @@ mongoose.connect(mongodb://localhost:27017/<database_name>,
                 { useUnifiedTopology: true }    // Written only to avoid warning.
                 );
 //The mongoose.connect() method returns a promise. Hence, we need to resolve/reject the promise.
-.then(<    //some code >)
+.then(<  //some code  >)
 .catch((err) => {
   //Log the error.
   console.log("Error :", err);
   });
+
+//Basic format.
 
 //Schema
 //A mongoose schema defines the structure of

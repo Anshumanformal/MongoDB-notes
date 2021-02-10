@@ -41,8 +41,8 @@
         1 with any property means displaying.
 
 >db.<collection_name>.find({active:<any_desired_value>}).pretty().limit(1)
-//Here, with limit(1), we get the first value which matches the filter.
-//With limit(2), we get the first two values which match the filter.
+//Here, with limit(1), we get the first value which matches the filter(i.e. 'active' in this case).
+//With limit(2), we get the first two values which match the filter(i.e. 'active' in this case).
 
 //The same objective can be achieved by:
 >db.<collection_name>.findOne()

@@ -17,6 +17,11 @@
 //To create a new collection inside the database.
 > db.createCollection( <collection_name> )
 
+
+//To drop collections from a database.
+db.< collection_name >.drop()
+
+
 //To delete the collection.
 //This query will anyway let the 'show dbs' to show the deleted database. But in reality, the database is deleted.
 > db.dropDatabase()

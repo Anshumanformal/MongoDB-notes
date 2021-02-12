@@ -11,10 +11,18 @@
 // Now if we type 'show dbs' in the shell, then the newly created database is
 // not shown.
 
-// Ans. In order for the database to show in the newly created database, there
+// Ans. In order for the database list to show the newly created database, there
 // should be atleast one collection created.
 
-// To create a new collection.
+//To create a new collection inside the database.
+> db.createCollection( <collection_name> )
+
+//To delete the collection.
+//This query will anyway let the 'show dbs' to show the deleted database. But in reality, the database is deleted.
+> db.dropDatabase()
+
+
+// To create a new document.
 // Syntax: db.<collection_name>.insertOne({<collection1: "value1">,<collection2: "value2">,<collection3: "value3">})
 
 //To view the current/active database.

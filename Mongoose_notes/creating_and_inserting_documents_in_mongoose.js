@@ -61,7 +61,7 @@ const playlistSchema = new mongoose.Schema({
   },
 });
 
-//Here, Playlist is a class created from mongoose.model.
+//Here, Playlist is a collection created from mongoose.model.
 //Collection creation.
 const Playlist = new mongoose.model("Playlist", playlistSchema); //PlayList is in PascalCase/ UpperCamelCase.
 

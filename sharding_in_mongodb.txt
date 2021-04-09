@@ -1,0 +1,53 @@
+Sharding:
+
+Pros:
+Helps in vertical scaling of the mongoDB database.
+Single replica set has limitation of 12 nodes.
+
+
+
+Cons:
+Once a collection has been sharded, MongoDB provides no method to unshard a sharded collection.
+
+
+
+Shard — A partition in Mongo is called a shard. Each partition or shard contains a subset of the total data that is there in the collection. And each document resides entirely in one shard. A shard is a replica-set that holds the data.
+
+Config server — The config server holds a configuration or the mapping of which document belongs to which shard. It is also a mongo-server(mongod-service). It is a 3 node replica set.
+
+Chunk — To have one mapping for each key is difficult. So instead config server manages chunk. A chunk is a set of documents. Each chunk belongs to exactly one shard. MongoDB partitions sharded data into chunks. Each chunk has an inclusive lower and exclusive upper range based on the shard key.
+
+
+
+
+
+Steps:
+
+1. To know whether a collection is sharded or not sharded.
+
+>db.<collection_name>.getShardDistribution()
+
+2. To enable sharding for a database(or collection)
+
+>sh.enableSharding("<collection_name>")
+
+Here, in the database, we can have lots of collections. We don't need to
+shard every collection in the database.
+
+Also, we can shard some collections and leave some collections unsharded, and they can co-exist in a database(keeping in mind, that the database should be already sharded)
+
+
+Note: Any collection, where we don't specify sharding goes into the
+primary shard. 
+
+3. To shard a collection.
+
+>sh.shardCollection(<collection_name>,{"title": "hashed"})
+
+Now, we can view sharded collection details from the 1st commmand.
+
+> db.<collection_name>.getShardDistribution()
+
+4. To view the status of the sharding done on the collection.
+
+>sh.status()
